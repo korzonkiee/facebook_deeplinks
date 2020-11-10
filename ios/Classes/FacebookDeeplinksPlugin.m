@@ -85,7 +85,8 @@ static id _instance;
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
-    return [self handleLink:[url absoluteString]];
+    [self handleLink:[url absoluteString]];
+    return NO;
 }
 
 - (void)handleMethodCall:(FlutterMethodCall *)call result:(FlutterResult)result {
